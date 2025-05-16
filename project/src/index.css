@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary-50: 245, 243, 255;
+  --color-primary-100: 237, 233, 254;
+  --color-primary-200: 221, 214, 254;
+  --color-primary-300: 196, 181, 253;
+  --color-primary-400: 167, 139, 250;
+  --color-primary-500: 139, 92, 246;
+  --color-primary-600: 124, 58, 237;
+  --color-primary-700: 109, 40, 217;
+  --color-primary-800: 91, 33, 182;
+  --color-primary-900: 76, 29, 149;
+  
+  --color-accent-500: 236, 72, 153;
+}
+
+/* Dark Mode Colors */
+html[data-theme='dark'] {
+  --color-bg-primary: 17, 24, 39;
+  --color-bg-secondary: 31, 41, 55;
+  --color-text-primary: 243, 244, 246;
+  --color-text-secondary: 209, 213, 219;
+}
+
+/* Light Mode Colors */
+html[data-theme='light'] {
+  --color-bg-primary: 255, 255, 255;
+  --color-bg-secondary: 249, 250, 251;
+  --color-text-primary: 17, 24, 39;
+  --color-text-secondary: 107, 114, 128;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Transition durations */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Hover states */
+.hover\:scale-\[1\.01\]:hover {
+  transform: scale(1.01);
+}
