@@ -9,7 +9,6 @@ import UserProfile from './components/profile/UserProfile';
 function App() {
   const [activeSection, setActiveSection] = useState<string>('home');
 
-  // Render the appropriate section based on state
   const renderSection = () => {
     switch (activeSection) {
       case 'create':
@@ -25,7 +24,7 @@ function App() {
   return (
     <ThemeProvider>
       <MemeProvider>
-        <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors">
+        <div className="min-h-screen bg-gray-100 dark:bg-gray-899 transition-colors">
           <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
           <div className="pt-16 md:pt-20 pb-6">
             {renderSection()}
